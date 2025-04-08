@@ -1,4 +1,6 @@
 import configs.TestConfig;
+import configs.TestPropertiesConfig;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +14,8 @@ import static constants.Constants.BASE_URL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HomePageTests {
-    TestConfig config = new TestConfig();
+    //TestConfig config = new TestConfig();
+    TestPropertiesConfig config = ConfigFactory.create(TestPropertiesConfig.class, System.getProperties());
     WebDriver driver;
 
     @BeforeEach
